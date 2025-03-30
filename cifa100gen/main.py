@@ -179,7 +179,7 @@ def train_vqvae():
 def train_pixelcnn():
     print("开始训练 PixelCNN ...")
     # 固定 VQVAE 参数，不再更新
-    vqvae_path = r"D:\OneDrive\桌面\VectorQuantization\results\model\vqvae_epoch_50.pth"
+    vqvae_path = r"VectorQuantization\results\model\vqvae_epoch_50.pth"
     vqvae.load_state_dict(torch.load(vqvae_path, map_location=config["device"]))
     vqvae.eval()  # 固定 VQVAE 参数，不再更新
     for epoch in range(1, config["pixelcnn_epochs"] + 1):

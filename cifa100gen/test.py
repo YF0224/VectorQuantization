@@ -63,7 +63,7 @@ class CelebAHQDataset(Dataset):
         img = Image.open(self.img_paths[idx]).convert('RGB')
         return self.transform(img)
     
-root = r"D:\BaiduNetdiskDownload\CelebA\Img\img_align_celeba\img_align_celeba"
+root = r""#your CelebA HQ dataset path
 dataset = CelebAHQDataset(root)
 train_loader = DataLoader(dataset, batch_size=config["batch_size"], 
                             shuffle=True, num_workers=8, pin_memory=True)
