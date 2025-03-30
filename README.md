@@ -1,0 +1,2 @@
+# VectorQuantization
+Discrete Visual Tokenizer
