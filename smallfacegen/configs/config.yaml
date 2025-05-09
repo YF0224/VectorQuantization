@@ -1,0 +1,27 @@
+data:
+  dataset_path: 
+  image_size: 512
+
+train:
+  batch_size: 64
+  epochs: 20
+  lr: 2e-4
+  save_every: 5
+
+model:
+  in_channels: 3
+  out_channels: 64
+  hidden_channels: 128
+  residual_blocks: 2
+  n_e: 512
+  e_dim: 64
+  beta: 0.25
+
+pixelcnn:
+  n_layers: 15
+  lr: 1e-3
+  input_shape: [32, 32]  # 根据你的编码器输出大小
+
+log:
+  log_interval: 100
+  log_dir: "./outputs/logs"

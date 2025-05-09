@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from ResidualBlock import ResidualBlock
+from .ResidualBlock import ResidualBlock
 
 class Encoder(nn.Module):
     def __init__(self, in_channels, out_channels, hidden_channels, res_nums):
@@ -29,4 +28,4 @@ class Encoder(nn.Module):
 if __name__ == '__main__':
     x = torch.rand(1, 3, 512, 512)
     model = Encoder(3, 128, 256, 4)
-    print(model(x).shape)
+    print(model(x).shape)#1,128,32,32

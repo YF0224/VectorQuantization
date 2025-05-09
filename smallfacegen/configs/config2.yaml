@@ -1,0 +1,29 @@
+data:
+  dataset_path: D:\BaiduNetdiskDownload\CelebA\Img\img_align_celeba\img_align_celeba
+  image_size: 32
+
+train:
+  batch_size: 64
+  epochs: 100
+  lr: 2e-4
+  save_every: 10
+
+model:
+  in_channels: 3
+  out_channels: 64
+  hidden_channels: 128
+  residual_blocks: 2
+  n_e: 512
+  e_dim: 64
+  beta: 0.25
+
+pixelcnn:
+  epochs: 100
+  n_layers: 15
+  lr: 1e-3
+  sample_every: 1
+  input_shape: [8, 8]  # 根据你的编码器输出大小
+
+log:
+  log_interval: 100
+  log_dir: "./outputs/logs"

@@ -1,7 +1,6 @@
 import torch
-import torch.nn as nn  
-import torch.nn.functional as F
-from ResidualBlock import ResidualBlock
+import torch.nn as nn
+from .ResidualBlock import ResidualBlock
 # because the decoder is the reverse of the encoder, so i make the in_channels and out_channels exchange, just to simple the vqvae 
 class Decoder(nn.Module):
     def __init__(self, in_channels, out_channels, hidden_channels, res_nums):
@@ -39,4 +38,4 @@ if __name__ == '__main__':
     x = torch.randn(4, 256, 32, 32)  
     decoder = Decoder(in_channels=3, out_channels=256, hidden_channels=256, res_nums=4)
     output = decoder(x)
-    print(output.shape)  
+    print(output.shape)#4,3,512,4512
